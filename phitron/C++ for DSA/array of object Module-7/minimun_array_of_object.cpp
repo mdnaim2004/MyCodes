@@ -21,13 +21,24 @@ int main() {
     student minimum;
     minimum.marks = INT_MAX;
 
+    student maximum;
+    maximum.marks = INT_MIN;
+    
+
     for(int i=0; i<n; i++){
         //cout<<arr[i].name << " " <<arr[i].roll <<" " << arr[i].marks <<endl;
         //minimum = min(arr[i].marks, minimum);
+
         if(arr[i].marks < minimum.marks){
             minimum = arr[i];
         }
+
+        if(arr[i].marks > maximum.marks){
+            maximum = arr[i];
+        }
+        
     }
     cout << minimum.name << " "<<minimum.roll <<" " << minimum.marks << endl;
+    cout << maximum.name << " "<<maximum.roll <<" " << maximum.marks << endl;
     return 0;
 }
