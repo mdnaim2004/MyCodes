@@ -16,7 +16,7 @@ int main() {
             for(int j=0; j<sec; j++){
                 if(s[i+j] != x[j]){
                     flag = 200;
-                    return;
+                    break;
                 }
             }
             if(flag == 100){
