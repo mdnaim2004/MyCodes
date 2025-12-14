@@ -1,0 +1,13 @@
+// Copy this whole block and replace your .vscode/settings.json (or User settings.json) contents with it
+{
+    // Code Runner UI + Terminal behaviour
+    "code-runner.runInTerminal": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.executorMap": {
+        "c": "gcc \"$fullFileName\" -o \"$fileNameWithoutExt.exe\" && .\\\"$fileNameWithoutExt.exe\"",
+        "cpp": "g++ \"$fullFileName\" -o \"$fileNameWithoutExt.exe\" && .\\\"$fileNameWithoutExt.exe\""
+    },
+    "code-runner.showRunIconInEditorTitleMenu": true,
+    "code-runner.showRunButton": true
+}
