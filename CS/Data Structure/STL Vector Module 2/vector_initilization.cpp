@@ -40,3 +40,5 @@ int main() {
 
     return 0;
 }
+
+// And Vector time complexity O(n)
