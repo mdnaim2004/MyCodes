@@ -1,0 +1,15 @@
+
+                                    if n = 1000
+
+
+1. Constant     : O(1)------------------> O(1)
+2. Linear       : O(N)------------------> O(1000)
+3. Square       : O(log N)--------------> O(log 1000) = 10
+4. Square       : O(sqrt(N))------------> O(sqrt(1000)) = 32
+5. quadratic    : O(N*N)----------------> O(1000 * 1000) = 1000000
+6. Linearithmic : O(N log N)------------> O(1000 log 1000) = 10000
+
+
+best to worst of time complexity --->
+
+O(1) ---> O(log N) ---> O(sqrt(n)) ---> O(N) ---> O(N log N) ---> O(N*N)
