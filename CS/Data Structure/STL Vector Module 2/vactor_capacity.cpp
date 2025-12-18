@@ -39,3 +39,4 @@ int main() {
 
     return 0;
 }
+//vector time complexity O(1).........
