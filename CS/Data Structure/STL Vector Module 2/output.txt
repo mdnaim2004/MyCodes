@@ -1,9 +1,1 @@
-0
-1
-2
-4
-4
-8
-Vector size :19 20 30 30 30 
-Vector resize :19 20 30 30 
-increase the vector and set value of vector:19 20 30 30 200 200 200 200 200 200 
+1 2 
