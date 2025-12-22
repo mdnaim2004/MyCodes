@@ -1,0 +1,1 @@
+{"name":"Local: SearchQuery","url":"f:\\MyCodes\\CS\\Data Structure\\Pratcis problem\\SearchQuery.cpp","tests":[{"id":1766424775440,"input":"5\n6 3 2 1 8\n\n4\n\n1\n5\n2\n9","output":"YES\nNO\nYES\nNO\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"f:\\MyCodes\\CS\\Data Structure\\Pratcis problem\\SearchQuery.cpp","group":"local","local":true}
