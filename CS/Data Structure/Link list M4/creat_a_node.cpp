@@ -19,6 +19,18 @@ int main() {
     c.next = &d;
     d.next = NULL;
 
-    cout << a.val << " " << b.val << " "  << c.val << " " << d.val << " ";
+    //cout << a.val << " " << b.val << " "  << c.val << " " << d.val << " ";
+
+    cout << a.val<<endl;
+    // cout << (*a.next).val << endl;
+    cout <<a.next->val<<endl;
+
+    // cout << (*(*a.next).next).val << endl;
+    cout <<a.next->next->val << endl;
+
+    // cout << (*(*(*a.next).next).next).val << endl;
+    cout << a.next->next->next->val <<endl;
+
+    
     return 0;
 }
