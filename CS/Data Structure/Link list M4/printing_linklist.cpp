@@ -29,10 +29,24 @@ int main() {
     // cout << head->next->next->next->next->val << endl;
 
     //printing linklist
+    // while(head != NULL){
+    //     cout << head->val << endl;
+    //     head = head->next;
+    // }
 
-    while(head != NULL){
+
+    Node* temp = head;
+    while (temp != NULL){
+        cout << temp->val << " ";
+        temp = temp->next;
+    }
+
+    temp = head;
+    
+
+    while(temp != NULL){
         cout << head->val << endl;
-        head = head->next;
+        temp = temp->next;
     }
 
     return 0;
