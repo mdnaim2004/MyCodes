@@ -12,6 +12,7 @@ class Node{
     }
 };
 
+
 void insert_at_tail(Node* &head, Node* &tail, int val){
     Node* newnode = new Node(val);
 
@@ -23,23 +24,12 @@ void insert_at_tail(Node* &head, Node* &tail, int val){
     tail = newnode;
 }
 
-// void print_link_list(Node* &head){
-//     Node* temp = head;
-
-//     while(temp != NULL){
-//         cout << temp->val << " ";
-//         temp = temp->next;
-//     }
-
-// }
-
 
 int difference_min_max(Node* head){
 
     if (head == NULL){
         return 0;
     }
-
     int max = head->val;
     int min = head->val;
 
@@ -56,10 +46,10 @@ int difference_min_max(Node* head){
         temp = temp->next;
 
     }
-
     int diff = max - min;
-
     cout << diff <<endl;
+
+    return diff;
 }
 
 
