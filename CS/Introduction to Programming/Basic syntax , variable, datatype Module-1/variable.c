@@ -7,7 +7,7 @@ int main(){
 
     float var2 = 4.89;
 
-    char ch = 'N';
+    char ch = 'N'; // chracter type variable
 
     printf("var1 = %d\n", var1);
     printf("var2 = %d\n", var2);
