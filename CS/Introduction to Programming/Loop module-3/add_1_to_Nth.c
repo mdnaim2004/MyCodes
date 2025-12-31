@@ -8,3 +8,7 @@ int main(){
     }
     printf("%d\n",sum);
 }
+
+
+
+//using while loop adding 1 to nth number
