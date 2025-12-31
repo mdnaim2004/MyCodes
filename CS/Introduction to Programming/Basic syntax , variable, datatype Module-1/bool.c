@@ -3,9 +3,9 @@
 
 int main(){
 
-    bool var1 = true;
+    bool var1 = true; //boolean type variable
 
-    bool var2 = false;
+    bool var2 = false; //boolean tyoe variable
 
     printf("var1 = %d\n", var1);
 
