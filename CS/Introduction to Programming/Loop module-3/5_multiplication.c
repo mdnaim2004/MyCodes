@@ -5,3 +5,8 @@ int main(){
         printf("5 * %d = %d\n", i, j);
     }
 }
+
+
+
+
+// Multiplication table
