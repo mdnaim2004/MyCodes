@@ -10,3 +10,5 @@ int main(){
         i++;
     }while(i <= 10);
 }
+
+// do while loop start korle minimum 1 bar cholbei... then other condition gulo fullfill korbr
