@@ -7,3 +7,6 @@ int main(){
 
     return 0;
 }
+
+
+//multipling two number
