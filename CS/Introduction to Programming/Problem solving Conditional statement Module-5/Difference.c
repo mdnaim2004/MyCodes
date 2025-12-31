@@ -1,3 +1,6 @@
+
+
+// the problem statement state that diffrence between 4 number
 #include<stdio.h>
 int main(){
     int A, B, C, D;
