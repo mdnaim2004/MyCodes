@@ -18,3 +18,5 @@ int main(){
 
     return 0;
 }
+
+// mostly interesting questions is find luckey number
