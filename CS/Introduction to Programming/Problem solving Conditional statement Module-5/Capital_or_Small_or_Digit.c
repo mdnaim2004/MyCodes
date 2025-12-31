@@ -1,3 +1,5 @@
+
+//the priblem statement is conditional statement type problem
 #include<stdio.h>
 int main(){
     char ch;
