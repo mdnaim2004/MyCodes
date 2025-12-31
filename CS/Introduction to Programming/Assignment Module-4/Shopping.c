@@ -14,3 +14,5 @@ int main(){
         printf("Bad luck!\n");
     }
 }
+
+// this is a complex problem.....and 3 conditions........
