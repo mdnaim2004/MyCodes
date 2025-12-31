@@ -1,3 +1,8 @@
+
+
+
+//Adding 1 to nth position of all number
+
 #include<stdio.h>
 int main(){
     int n;

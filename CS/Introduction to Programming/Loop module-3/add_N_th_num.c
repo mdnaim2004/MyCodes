@@ -8,3 +8,7 @@ int main(){
 
     return 0;
 }
+
+
+
+//in this problem print 1 to n. 
