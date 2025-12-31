@@ -1,3 +1,9 @@
+
+
+
+// this problem statement is make a simple calculator
+
+
 #include<stdio.h>
 int main(){
     int x,y;
