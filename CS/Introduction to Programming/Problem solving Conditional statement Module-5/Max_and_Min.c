@@ -1,3 +1,8 @@
+
+
+// Find minimum and maximum into a three integers value
+
+
 #include<stdio.h>
 int main(){
     int A, B, C;
