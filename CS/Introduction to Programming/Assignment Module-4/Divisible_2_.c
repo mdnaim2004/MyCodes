@@ -8,3 +8,5 @@ int main(){
         }
     }
 }
+
+// divisicle two numbers(3 and 7)
