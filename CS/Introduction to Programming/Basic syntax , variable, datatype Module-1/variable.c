@@ -2,10 +2,10 @@
 #include<stdio.h>
 
 int main(){
-    int var1 = 10;
+    int var1 = 10; //integer type variable
     var1 = 20;
 
-    float var2 = 4.89;
+    float var2 = 4.89; // floating value
 
     char ch = 'N'; // chracter type variable
 
