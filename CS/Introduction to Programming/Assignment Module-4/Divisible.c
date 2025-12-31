@@ -9,3 +9,7 @@ int main(){
         printf("NO\n");
     }
 }
+
+
+
+//divisible number of 3
