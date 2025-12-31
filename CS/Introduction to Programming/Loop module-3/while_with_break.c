@@ -4,7 +4,7 @@ int main(){
     while(i<=20){
         
         if(i==12){
-            break;
+            break;  // break statement. using stop the program
         }
         printf("%d\n", i);
         i++;
