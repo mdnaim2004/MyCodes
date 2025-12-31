@@ -1,4 +1,7 @@
 
+
+
+// this is the first code in c program
 #include<stdio.h>
 int main(){
     int num = 100;
