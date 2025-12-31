@@ -4,7 +4,7 @@ int main(){
     for(int i = 1; i<=n; i++){
     //    break;
         if(i == 13){
-            break;
+            break;         // break statement  using the stope the program
         }
         printf("%d\n", i);
         //break;
