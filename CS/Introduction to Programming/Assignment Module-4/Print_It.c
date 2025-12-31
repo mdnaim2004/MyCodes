@@ -6,3 +6,7 @@ int main(){
 
     return 0;
 }
+
+
+
+// print random
