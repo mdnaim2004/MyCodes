@@ -3,7 +3,7 @@ int main(){
     char ch;
     scanf("%c", &ch);
 
-    if(ch >= 'A' && ch <= 'Z'){
+    if(ch >= 'A' && ch <= 'Z'){  // type conversion problem
         ch = ch + 32;
         printf("%c\n", ch);
     }
