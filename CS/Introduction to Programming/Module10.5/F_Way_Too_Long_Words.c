@@ -66,3 +66,10 @@ int main() {
     }
     return 0;
 }
+
+
+
+
+
+
+// the code forses problem "the way to long word"
