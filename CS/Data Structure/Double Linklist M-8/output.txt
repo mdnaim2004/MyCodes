@@ -1,1 +1,2 @@
-10 20 30 
+Printinf Backward : 10 20 30 
+Printinf Backward : 30 20 10 

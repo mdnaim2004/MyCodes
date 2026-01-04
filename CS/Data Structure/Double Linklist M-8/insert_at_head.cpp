@@ -14,9 +14,17 @@ class Node{
     }
 };
 
+void insert_at_head(Node* &head, int val){
+    Node* newnode = new Node(val);
 
+    newnode->next = head;
+    head->prev = newnode;
 
-void print_forward_doubbly_linklist(Node* &head){
+    head = newnode;
+
+}
+
+void print_at_linklish(Node* head){
     Node* temp = head;
 
     cout << "Printinf Backward : ";
@@ -26,7 +34,6 @@ void print_forward_doubbly_linklist(Node* &head){
     }
     cout << endl;
 }
-
 
 void print_at_Backward_linklish(Node* &tail){
     Node* temp = tail;
@@ -40,11 +47,11 @@ void print_at_Backward_linklish(Node* &tail){
 }
 
 
-
 int main() {
     Node* head = new Node(10);
     Node* a = new Node(20);
     Node* tail = new Node(30);
+
 
     head->next = a;
     a->prev = head;
@@ -52,10 +59,14 @@ int main() {
     a->next = tail;
     tail->prev = a;
 
+    insert_at_head(head, 100);
+    insert_at_head(head, 200);
+    insert_at_head(head, 300);
 
-    print_forward_doubbly_linklist(head);
-    
+    print_at_linklish(head);
+
     print_at_Backward_linklish(tail);
+    
 
     return 0;
 }
