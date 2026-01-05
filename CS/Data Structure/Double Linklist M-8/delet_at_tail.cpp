@@ -17,16 +17,20 @@ class Node{
 
 void delet_at_tail(Node* &head, Node* &tail){
     Node* deletNode = tail;
-    tail->prev = tail;
+    tail = tail->prev;
     delete deletNode;
     
+    if(tail == NULL){
+        head = NULL;
+        return;
+    }
     tail->next = NULL;
 }
 
 void print_at_linklish(Node* head){
     Node* temp = head;
 
-    cout << "Printinf Backward : ";
+    cout << "Printinf linklist : ";
     while(temp != NULL){
         cout << temp->val << " ";
         temp = temp->next;
