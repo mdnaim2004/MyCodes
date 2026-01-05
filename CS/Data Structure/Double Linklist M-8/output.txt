@@ -1,1 +1,2 @@
-Printinf linklist : 10 30 
+Printinf Backward : 50 40 390 500 10 
+Printinf Backward : 10 500 390 40 50 
