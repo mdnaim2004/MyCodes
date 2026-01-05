@@ -61,11 +61,15 @@ int main() {
     a->next = tail;
     tail->prev = a;
 
+
+    //add index and value
     insert_at_any_position(head, tail, 1, 200);
     insert_at_any_position(head, tail, 2, 300);
     insert_at_any_position(head, tail, 3, 400);
     insert_at_any_position(head, tail, 4, 500);
 
+
+    //printing the value
     print_at_linklist(head);
 
     return 0;
