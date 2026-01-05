@@ -1,1 +1,1 @@
-Printinf linklist : 10 20 
+Printinf linklist : 10 30 
