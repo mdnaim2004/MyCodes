@@ -1,1 +1,1 @@
-print Linklist : 10 20 30 100 200 500 
+print Linklist : 10 20 200 300 400 500 30 
