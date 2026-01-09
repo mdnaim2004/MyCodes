@@ -14,5 +14,9 @@ int main() {
     // list<int> l(10);
     // cout << *(l.begin()) << endl;
 
+    list<int> l(10, 3);
+
+    cout << *(l.begin()) << endl;
+
     return 0;
 }
