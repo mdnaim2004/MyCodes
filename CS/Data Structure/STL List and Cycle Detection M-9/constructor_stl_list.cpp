@@ -14,9 +14,18 @@ int main() {
     // list<int> l(10);
     // cout << *(l.begin()) << endl;
 
+    
+    // cout << *(l.begin()) << endl;
+
     list<int> l(10, 3);
 
-    cout << *(l.begin()) << endl;
+    // for(auto it = l.begin(); it != l.end(); it++){
+    //     cout << *it << endl;
+    // }
+
+    for(int val:l){
+        cout << val << " ";
+    }
 
     return 0;
 }
