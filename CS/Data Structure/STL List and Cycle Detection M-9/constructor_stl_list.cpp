@@ -23,8 +23,15 @@ int main() {
     //     cout << *it << endl;
     // }
 
-    list<int> l = {1,2,3,4,5,6,7,8,9};
-    list<int> l2(l);
+    // list<int> l = {1,2,3,4,5,6,7,8,9};
+    // list<int> l2(l);
+
+    // for(int val: l2){
+    //     cout << val << " ";
+    // }
+
+    vector<int> v = {10, 20 ,30};
+    list<int> l2(v.begin(), v.end());
 
     for(int val: l2){
         cout << val << " ";
