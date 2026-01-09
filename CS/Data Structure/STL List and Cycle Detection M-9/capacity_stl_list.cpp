@@ -10,18 +10,22 @@ int main() {
 
     cout <<"list size = "<< l.size() << endl;
 
+    // cout << l.resize(2) << endl;
+    l.resize(8, 100);
 
 
-    // for(int val : l){
-    //     cout << val << " ";
+    for(int val : l){
+        cout << val << " ";
+    }
+
+
+
+    // if(l.empty()){
+    //     cout <<"Empty";
     // }
-
-    if(l.empty()){
-        cout <<"Empty";
-    }
-    else{
-        cout << "Not Empty";
-    }
+    // else{
+    //     cout << "Not Empty";
+    // }
 
     return 0;
 }
