@@ -17,13 +17,16 @@ int main() {
     
     // cout << *(l.begin()) << endl;
 
-    list<int> l(10, 3);
+    // list<int> l(10, 3);
 
     // for(auto it = l.begin(); it != l.end(); it++){
     //     cout << *it << endl;
     // }
 
-    for(int val:l){
+    list<int> l = {1,2,3,4,5,6,7,8,9};
+    list<int> l2(l);
+
+    for(int val: l2){
         cout << val << " ";
     }
 
