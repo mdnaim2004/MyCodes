@@ -1,1 +1,2 @@
-10 20 30 
+list size = 5
+Not Empty
