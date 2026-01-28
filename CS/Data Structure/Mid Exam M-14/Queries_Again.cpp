@@ -22,6 +22,7 @@ void insert_linklist(Node* &head, Node* &tail, int &size, int x, int val){
         head = newnode;
         tail = newnode;
     }
+
     else if(x == 0){
         newnode->next = head;
         head->prev = newnode;
@@ -32,6 +33,7 @@ void insert_linklist(Node* &head, Node* &tail, int &size, int x, int val){
         newnode->prev = tail;
         tail = newnode;
     }
+    
     else{
         Node* current = head;
 
