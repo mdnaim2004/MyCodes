@@ -44,34 +44,35 @@ Node* input_tree(){
     return root;
 }
 
-void print_leaf_node(Node* root, vector<int>& v){
+int total_Node(Node* root){
     if(root == NULL){
-        return;
+        return 0;
     }
-
-    // print_leaf_node(root->right);
-    // print_leaf_node(root->left);
-    
     if(root->left == NULL && root->right == NULL){
-        v.push_back(root->val);
-        // cout << root->val << " ";
-        return;
+        return 1;
     }
-    print_leaf_node(root->left, v);
-    print_leaf_node(root->right, v);
+    int l = total_Node(root->left);
+    int r = total_Node(root->right);
+
+    return l+r+1;
+}
+int max_hight(Node* root){
+    if(root == NULL) return 0;
+    if(root->left == NULL && root->right == NULL) return 1;
+
+    int l = max_hight(root->left);
+    int r = max_hight(root->right);
+
+    return max(l,r)+1;
 }
 
 int main(){
     Node* root = input_tree();
-    // print_leaf_node(root);
+    // cout << total_Node(root) << endl;
+    // cout  << max_hight(root) << endl;
 
-    vector<int> v;
-    print_leaf_node(root, v);
-
-    sort(v.begin(), v.end(), greater<int>());
-
-    for(int val : v){
-        cout << val << " ";
+    if(total_Node(root) == max_hight(pow)2,max_hight, -1){
+        cout << 
     }
     
     return 0;
