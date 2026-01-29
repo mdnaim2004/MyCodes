@@ -44,39 +44,8 @@ Node* input_tree(){
     return root;
 }
 
-int total_Node(Node* root){
-    if(root == NULL){
-        return 0;
-    }
-    if(root->left == NULL && root->right == NULL){
-        return 1;
-    }
-    int l = total_Node(root->left);
-    int r = total_Node(root->right);
-
-    return l+r+1;
-}
-int max_hight(Node* root){
-    if(root == NULL) return 0;
-    if(root->left == NULL && root->right == NULL) return 1;
-
-    int l = max_hight(root->left);
-    int r = max_hight(root->right);
-
-    return max(l,r)+1;
-}
-
 int main(){
     Node* root = input_tree();
-    // cout << total_Node(root) << endl;
-    // cout  << max_hight(root) << endl;
 
-    if(total_Node(root) == ((int)pow(2,max_hight(root)) -1)){
-        cout << "YES" << endl;
-    }
-    else{
-        cout <<"NO" << endl;
-    }
-    
     return 0;
 }

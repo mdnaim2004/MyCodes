@@ -44,39 +44,29 @@ Node* input_tree(){
     return root;
 }
 
-int total_Node(Node* root){
-    if(root == NULL){
-        return 0;
+void print_level(Node* root, int x, int level, int &flag){
+    if(root == NULL) return;
+    if(level == x){
+        cout << root->val << " ";
+        flag = 100;
+        return;
     }
-    if(root->left == NULL && root->right == NULL){
-        return 1;
-    }
-    int l = total_Node(root->left);
-    int r = total_Node(root->right);
-
-    return l+r+1;
+    print_level(root->left, x, level+1, flag);
+    print_level(root->right, x, level+1, flag);
 }
-int max_hight(Node* root){
-    if(root == NULL) return 0;
-    if(root->left == NULL && root->right == NULL) return 1;
 
-    int l = max_hight(root->left);
-    int r = max_hight(root->right);
-
-    return max(l,r)+1;
-}
 
 int main(){
     Node* root = input_tree();
-    // cout << total_Node(root) << endl;
-    // cout  << max_hight(root) << endl;
+    int x;
+    cin >> x;
 
-    if(total_Node(root) == ((int)pow(2,max_hight(root)) -1)){
-        cout << "YES" << endl;
-    }
-    else{
-        cout <<"NO" << endl;
-    }
+    int flag = 200;
+    print_level(root,x,0,flag);
     
+    if(flag == 200){
+        cout << "Invalid" << endl;
+    }
+
     return 0;
 }
