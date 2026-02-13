@@ -15,9 +15,10 @@ class Node{
 
 Node* input_binary_tree(){
     int val;
-    cin >> val;
+    cin >>val;
 
     Node* root;
+
     if(val == -1) root = NULL;
     else root = new Node(val);
 
@@ -26,13 +27,13 @@ Node* input_binary_tree(){
     if(root) q.push(root);
 
     while(!q.empty()){
-        Node* par = q.front();
+        Node* parent = q.front();
         q.pop();
 
-        int l,r;
+        int l, r;
         cin >> l >> r;
 
-        Node* myleft, *myright;
+        Node *myleft, *myright;
 
         if(l == -1) myleft = NULL;
         else myleft = new Node(l);
@@ -40,16 +41,35 @@ Node* input_binary_tree(){
         if(r == -1) myright = NULL;
         else myright = new Node(r);
 
-        par->left = myleft;
-        par->right = myright;
+        parent->left = myleft;
+        parent->right = myright;
 
-        if(par->left) q.push(par->left);
-        if(par->right) q.push(par->right);
+        if(parent->left) q.push(parent->left);
+        if(parent->right) q.push(parent->right);
     }
     return root;
 }
 
-int main(){
+bool searchBST(Node* root, int x){
+    if(root == NULL) return false;
+
+    if(root->val == x) return true;
+
+    if(x < root->val) return searchBST(root->left, x);
+    else return searchBST(root->right, x);
     
+}
+
+int main(){
+    Node* root = input_binary_tree();
+    int val;
+    cin >> val;
+
+    if(searchBST(root,val))
+        cout << "Found" << endl;
+    else
+        cout << "Not Found" <<endl;
+        
+
     return 0;
 }
