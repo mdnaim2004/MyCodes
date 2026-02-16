@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+6#include<bits/stdc++.h>
 using namespace std;
 class Node{
     public:
@@ -65,7 +65,7 @@ int main(){
     int val;
     cin >> val;
 
-    if(searchBST(root,val))
+    if(searchBST(root,val))//call value and check conditions....
         cout << "Found" << endl;
     else
         cout << "Not Found" <<endl;
