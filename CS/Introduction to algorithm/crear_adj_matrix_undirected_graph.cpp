@@ -14,7 +14,7 @@ int main(){
 
     //shortcut form.......
     memset(adj_mat, 0, sizeof(adj_mat));
-    
+
     
     for(int i=0; i<n; i++)
         for(int j=0; j<n; j++)
@@ -27,7 +27,8 @@ int main(){
         cin >> a >> b;
 
         adj_mat[a][b] = 1;
-        adj_mat[b][a] = 1;
+        //nicher line ta na dile directed graph hobbe......................
+        adj_mat[b][a] = 1; // ai line ta na dile directed graph hobbe........
     }
 
     for(int i=0; i<n; i++){
