@@ -12,6 +12,8 @@ int main(){
         cin >> a >> b;
 
         adj_list[a].push_back(b);
+
+        //nicher line ta just undirected graph hobbe ki na seita check kora.....
         adj_list[b].push_back(a); //for undirected graph...................
     }
 
