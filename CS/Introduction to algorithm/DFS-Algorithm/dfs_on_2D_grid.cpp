@@ -6,13 +6,13 @@ bool vis[105][105];
 
 int n,m;
 
-vector<pair<int,int>> d = {{-1,0},{1,0},{0,-1},{0,1}};
-
 bool valid(int i, int j){
     if(i<0 || i>=n || j<0 || j>=m)
         return false;
     return true;
 }
+
+vector<pair<int,int>> d = {{-1,0},{1,0},{0,-1},{0,1}};
 
 void dfs(int si,int sj){
     cout << si << " " << sj << endl;

@@ -3,6 +3,10 @@ using namespace std;
 char grid[105][105];
 bool vis[105][105];
 
+vector<pair<int,int>> d = {{-1,0},{1,0},{0,-1},{0,1}};
+
+int n,m; 
+
 void bfs(int si, int sj){
     queue<pair<int,int>> q;
     q.push({si,sj});
@@ -19,13 +23,25 @@ void bfs(int si, int sj){
         cout << par_i << " " << par_j << endl;
 
         for(int i=0; i<4; i++){
-            int ci = par_i + d[i]
+            int ci = par_i + d[i].first;
+            int cj = par_j + d[i].second;
+
+            if(valid(ci,cj) && !vis[ci][cj]){
+                q.push({ci, cj});
+                vis[ci][cj] = true;
+            }
         }
     }
 }
 
+bool valid(int i, int j){
+    if(i<0 || i>=n || j<0 || j>=m)
+        return false;
+    return true;
+}
+
 int main(){
-    int n,m;
+    // int n,m;
     cin >> n >> m;
 
     for(int i=0; i<n; i++)
@@ -35,7 +51,8 @@ int main(){
     int si, sj;
     cin >> si >> sj;
 
-    bfs()
+    memset(vis,false,sizeof(vis));
+    bfs(si, sj);
 
 
     return 0;
