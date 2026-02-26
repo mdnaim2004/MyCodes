@@ -35,7 +35,7 @@ void bfs(int si,int sj){
             int ci = par_i + d[i].first;
             int cj = par_j + d[i].second;
 
-            if(valid(ci, cj) && !vis[ci][cj]){ // check this value is valid and non visited....
+            if(valid(ci, cj) && !vis[ci][cj] && grid[ci][cj] == '.'){ // check this value is valid and non visited....
                 q.push({ci, cj});
                 vis[ci][cj] = true;
                 level[ci][cj] = level[par_i][par_j] + 1;
