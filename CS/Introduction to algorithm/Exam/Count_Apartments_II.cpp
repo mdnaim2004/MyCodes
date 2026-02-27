@@ -4,7 +4,6 @@ using namespace std;
 
 char grid[1005][1005];
 bool vis[1005][1005];
-int level[1005][1005];
 
 vector<pair<int, int>> d = {{-1,0}, {1,0}, {0,-1}, {0,1}};
 int m,n;
@@ -14,12 +13,12 @@ bool valid(int i, int j){
     else return true;
 }
 
-void bfs(int si,int sj){
+int bfs(int si,int sj){
     queue<pair<int,int>> q;
     q.push({si,sj});
     vis[si][sj] = true;
 
-    level[si][sj] = true;
+    int count = 1;
 
     while(!q.empty()){
         pair<int,int> par = q.front();
@@ -34,11 +33,13 @@ void bfs(int si,int sj){
 
             if(valid(ci, cj) && !vis[ci][cj] && grid[ci][cj] == '.'){
                 q.push({ci, cj});
-                vis[ci][cj] = true;       
-                level[ci][cj] = level[par_i][par_j] + 1;   
+                vis[ci][cj] = true;     
+                
+                count++;
             }
         }
     }
+    return count;
 }
 
 
@@ -51,18 +52,25 @@ int main(){
             cin >> grid[i][j];
 
     memset(vis, false, sizeof(vis));
-    memset(level, -1, sizeof(level));
 
-    //int count = 0;
+    vector <int> s;
+    
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){
             if(grid[i][j] == '.' && !vis[i][j]){
-                // count++;
-                cout << level[i][j] << endl;
-                bfs(i, j);
+
+                s.push_back(bfs(i, j));
             }
         }
     }
-    //cout << count <<endl;
+    if(s.empty())
+        cout << 0 << endl;
+
+    sort(s.begin(), s.end());
+
+    for(int x : s){
+        cout << x <<" ";
+    }
+
     return 0;
 }
