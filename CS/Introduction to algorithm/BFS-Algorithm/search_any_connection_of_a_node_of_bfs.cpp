@@ -33,11 +33,13 @@ int main(){
         adj_list [b].push_back(a);
     }
 
-    memset(vis, false, sizeof(vis));
-    int src, dest;
+    memset(vis, false, sizeof(vis)); // initialli ami vis ta ke false dhore nischi...
+
+    int src, dest; // then ami 2 ta inetger variaable nilam, 
+
     cin >> src >> dest;
 
-    bfs(src);
+    bfs(src);  // akhene ami bfs ke call kore tar vitor source pathaia dilam......and niche check kortechi je souese ta ki destination e gase ki na....
 
     if(vis[dest]) cout << "YES\n";else cout << "NO\n"; // akhene ami check kortechi je amar condition ta true or false
     return 0;

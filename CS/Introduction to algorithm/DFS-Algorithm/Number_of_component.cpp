@@ -7,7 +7,7 @@ bool vis[1005];
 void dfs(int src){
 
     //base case.....
-    cout << src << " ";
+    //cout << src << " ";
 
     vis[src] = true;
 
@@ -30,14 +30,15 @@ int main(){
         adj_list[a].push_back(b);
         adj_list[b].push_back(a);
     }
-
+    int count = 0;
     memset(vis, false,sizeof(vis));
     for(int i=0; i<n; i++){
         if(vis[i] == false){
             dfs(i);
-            cout << endl;
+            //cout << endl;
+            count++;
         }
     }
-
+    cout << count << endl;
     return 0;
 }

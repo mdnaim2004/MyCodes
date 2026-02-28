@@ -57,6 +57,7 @@ int main(){
         cout << i <<" => " << level[i] <<endl;
         //cout << i <<" parent " <<parent[i] << endl;
     }
+    
     for(int i=0; i<n; i++){
         //cout << i <<" => " << level[i] <<endl;
         cout << i <<" parent " <<parent[i] << endl;
