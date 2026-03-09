@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> adj_list[1000];
-bool vis[1000];
-int parent[1000];
+vector<int> adj_list[100005];
+bool vis[100005];
+int parent[100005];
 bool cycle;
 
 void dfs(int src){
@@ -11,8 +11,8 @@ void dfs(int src){
 
     for(int child : adj_list[src]){
         if(vis[child] == false){
-            dfs(child);
             parent[child] = src;
+            dfs(child);
         }
     }
 }
@@ -23,13 +23,14 @@ int main(){
 
     while(e--){
         int a, b;
-        cin >>a >> b;
+        cin >> a >> b;
 
         adj_list[a].push_back(b);
         adj_list[b].push_back(a);
     }
-    memset(vis, false, sizeof(false));
-    memset(parent,-1, sizeof(parent));
+
+    memset(vis, false, sizeof(vis));
+    memset(parent, -1, sizeof(parent));
 
     cycle = false;
 
@@ -38,8 +39,10 @@ int main(){
             dfs(i);
         }
     }
+
     for(int i=0; i<n; i++){
         cout << i << " parent " << parent[i] << endl;
     }
+
     return 0;
 }
