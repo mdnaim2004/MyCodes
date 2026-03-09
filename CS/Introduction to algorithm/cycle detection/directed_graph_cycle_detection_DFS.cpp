@@ -48,9 +48,6 @@ int main(){
         }
     }
 
-    // for(int i=0; i<n; i++){
-    //     cout << i << " parent " << parent[i] << endl;
-    // }
 
     if(cycle) cout << "Cycle detected"<< endl;
     else cout << "No Cycle" << endl;
