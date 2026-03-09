@@ -10,13 +10,14 @@ void dfs(int src){
     vis[src] = true;
 
     for(int child : adj_list[src]){
+        
         if(vis[child] && parent[src] != child){
             cycle = true;
         }
         if(vis[child] == false){
             parent[child] = src;  //this are actually processs....
             dfs(child);
-            //parent[child] = src;
+            
         }
     }
 }
