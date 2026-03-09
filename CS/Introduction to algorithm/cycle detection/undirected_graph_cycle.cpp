@@ -22,7 +22,7 @@ void bfs(int src){
             if(vis[child] && parent[par] != child){
                 cycle = true;
             }
-            if(vis[par] == false){
+            if(vis[child] == false){
                 q.push(child);
                 vis[child] = true;
                 parent[child] = par;
