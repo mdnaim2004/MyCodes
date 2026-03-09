@@ -48,7 +48,6 @@ int main(){
         }
     }
 
-
     if(cycle) cout << "Cycle detected"<< endl;
     else cout << "No Cycle" << endl;
 
