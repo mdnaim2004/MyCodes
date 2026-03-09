@@ -12,6 +12,8 @@ void bfs(int src){
         int par = q.front();
         q.pop();
 
+        cout << par << endl;
+
         for(int child : adj_list[par]){
             if(vis[par] == false){
                 q.push(child);
