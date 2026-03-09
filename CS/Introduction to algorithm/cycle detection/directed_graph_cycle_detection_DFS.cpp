@@ -3,19 +3,22 @@ using namespace std;
 
 vector<int> adj_list[100005];
 bool vis[100005];
-int parent[100005];
+bool pathvis[100005];
+
 bool cycle;
 
 void dfs(int src){
     vis[src] = true;
 
+    pathvis[src] = true;
+
     for(int child : adj_list[src]){
-        
-        if(vis[child] && parent[src] != child){
+
+        if(vis[child] && pathvis[child]){
             cycle = true;
         }
         if(vis[child] == false){
-            parent[child] = src;  //this are actually processs....
+            
             dfs(child);
             
         }
@@ -34,7 +37,7 @@ int main(){
     }
 
     memset(vis, false, sizeof(vis));
-    memset(parent, -1, sizeof(parent));
+    memset(pathvis, -1, sizeof(pathvis));
 
     cycle = false;
 
