@@ -47,5 +47,8 @@ int main(){
         cout << i << " parent " << parent[i] << endl;
     }
 
+    if(cycle) cout << "Cycle detected"<< endl;
+    else cout << "No Cycle" << endl;
+
     return 0;
 }
