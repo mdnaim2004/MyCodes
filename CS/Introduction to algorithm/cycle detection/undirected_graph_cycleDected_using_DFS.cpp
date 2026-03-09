@@ -14,7 +14,7 @@ void dfs(int src){
             cycle = true;
         }
         if(vis[child] == false){
-            parent[child] = src;
+            parent[child] = src;  //this are actually processs....
             dfs(child);
             //parent[child] = src;
         }
