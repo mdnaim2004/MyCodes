@@ -16,6 +16,7 @@ void dfs(int src){
         if(vis[child] == false){
             parent[child] = src;
             dfs(child);
+            //parent[child] = src;
         }
     }
 }
