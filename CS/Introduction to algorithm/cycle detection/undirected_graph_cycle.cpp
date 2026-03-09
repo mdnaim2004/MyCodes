@@ -3,6 +3,10 @@ using namespace std;
 vector<int> adj_list[1000];
 bool vis[1000];
 
+int parent[1000];
+
+bool cycle;
+
 void bfs(int src){
     queue<int> q;
     q.push(src);
@@ -12,12 +16,16 @@ void bfs(int src){
         int par = q.front();
         q.pop();
 
-        cout << par << endl;
+        //cout << par << endl;
 
         for(int child : adj_list[par]){
+            if(vis[child] && parent[par] != child){
+                cycle = true;
+            }
             if(vis[par] == false){
                 q.push(child);
                 vis[child] = true;
+                parent[child] = par;
             }
         }
     }
@@ -36,12 +44,16 @@ int main(){
     }
 
     memset(vis, false, sizeof(vis));
+    memset(parent, -1, sizeof(parent));
+    cycle = false;
 
     for(int i=0; i<n; i++){
         if(vis[i] == false){
             bfs(i);
         }
     }
-    //memset()
+    if(cycle) cout << "cycle detected";
+    else cout << "No cycle";
+    
     return 0;
 }
