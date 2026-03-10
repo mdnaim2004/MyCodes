@@ -5,7 +5,25 @@ vector<pair<int, int>> adj_list[1005];
 int dis[1005];
 
 void dijkstra(int src){
+    queue<pair<int, int>> q;
+    q.push({src, 0});
+    dis[src] = 0;
 
+    while(!q.empty()){
+        pair<int, int> par = q.front();
+        q.pop();
+
+        int par_node = par.first;
+        int par_dis = par.second;
+
+        for(auto child : adj_list[par_node]){
+            int child_node = child.first;
+            int child_dis = child.second;
+
+            
+        }
+        
+    }
 }
 
 int main(){
@@ -30,3 +48,6 @@ int main(){
 
     return 0;
 }
+
+
+//xinput enable 11-------tuchpad onn korer....
