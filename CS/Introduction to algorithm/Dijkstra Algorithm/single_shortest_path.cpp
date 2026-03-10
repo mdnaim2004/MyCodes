@@ -13,9 +13,9 @@ int main(){
         adj_list[b].push_back({a,c});
     }
     for(int i=0; i<n; i++){
-        cout<< i << " ==>> ";
+        cout<< i << " => ";
         for(pair<int,int> p : adj_list[i]){
-            cout << p.first << " -->> " << p.second << ", ";
+            cout <<i<<","<< p.first << " -> " << p.second << ", ";
         }
         cout << endl;
     }
