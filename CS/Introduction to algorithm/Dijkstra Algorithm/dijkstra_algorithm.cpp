@@ -20,7 +20,7 @@ void dijkstra(int src){
             int child_node = child.first;
             int child_dis = child.second;
 
-            
+
         }
         
     }
@@ -48,6 +48,3 @@ int main(){
 
     return 0;
 }
-
-
-//xinput enable 11-------tuchpad onn korer....
