@@ -19,8 +19,6 @@ void dijkstra(int src){ // function to perform Dijkstra's algorithm starting fro
         for(auto child : adj_list[par_node]){// loop through the child nodes of the parent node
             int child_node = child.first;// child node
             int child_dis = child.second; // distance of the child node from the parent node
-
-
         }
         
     }
