@@ -26,7 +26,7 @@ void dijkstra(int src){ // function to perform Dijkstra's algorithm starting fro
     }
 }
 
-int main(){
+int main(){// main function to read the graph information and call the Dijkstra's algorithm
     int n, e;// number of nodes and edges in the graph
     cin >> n >> e;// read the number of nodes and edges in the graph
 
@@ -46,5 +46,5 @@ int main(){
     }
     dijkstra(0);// call the Dijkstra's algorithm function with the source node as 0
 
-    return 0;
+    return 0;   // return 0 to indicate successful execution of the program
 }
