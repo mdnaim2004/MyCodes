@@ -14,25 +14,21 @@ bool valid(int i, int j){
 
 void dfs(int si, int sj){
     vis[si][sj] = true;
-
     for(int i=0; i<4; i++){
         int ci = si + d[i].first;
         int cj = sj + d[i].second;
-
         if(valid(ci, cj) && !vis[ci][cj] && grid[ci][cj] == '.')
             dfs(ci, cj);
     }
 }
-
 int main(){
     //int n,m;
     cin >> n >> m;
 
-    for(int i=0; i<n; i++){
-        for(int j=0; j<m; j++){
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
             cin >> grid[i][j];
-        }
-    }
+
     int si,sj, di,dj;
     cin >> si >> sj;
     cin >> di >> dj;
