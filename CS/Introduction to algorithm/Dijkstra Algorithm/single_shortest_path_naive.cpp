@@ -49,9 +49,12 @@ int main(){
     for(int i=0; i<n; i++){
         cout<< i << " => ";
         for(pair<int,int> p : adj_list[i]){
-            cout <<i<<","<< p.first << " -> " << p.second << ", ";
+            //cout <<i<<","<< p.first << " -> " << p.second << ", ";
+            cout << i << "-> " << dis[i] << endl;
         }
         cout << endl;
     }
     return 0;
 }
+
+
