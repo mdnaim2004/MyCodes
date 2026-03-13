@@ -3,7 +3,6 @@ using namespace std;
 
 char grid[1005][1005];
 bool vis[1005][1005];
-
 vector<pair<int, int>> d = {{-1, 0}, {1,0}, {0,-1}, {0, 1}};
 
 int n,m;
@@ -46,8 +45,7 @@ int main(){
     }
     dfs(si, sj);
 
-    if(vis[di][dj] == true)
-        cout << "YES" << endl;
+    if(vis[di][dj] == true) cout << "YES" << endl;
     else cout << "NO" << endl;
 
     return 0;
