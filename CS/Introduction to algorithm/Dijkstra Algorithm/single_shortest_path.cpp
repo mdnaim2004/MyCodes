@@ -32,7 +32,15 @@ int main(){
     cin >> n >>e; //inpt the number of the node and edge
 
     
-    while(e--){
+    while(e--){                                  /* 5 8
+                                                    0 1 10
+                                                    1 2 1
+                                                    0 2 7
+                                                    0 3 4
+                                                    2 3 1
+                                                    3 4 5
+                                                    1 4 3
+                                                    2 4 5*/
         int a, b, c;
         cin >> a >> b >> c;
         adj_list[a].push_back({b,c});   
