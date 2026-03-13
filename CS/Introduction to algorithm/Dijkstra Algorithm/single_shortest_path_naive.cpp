@@ -77,4 +77,5 @@ int main() {
 3 4 5
 1 4 3
 2 4 5
+file:///home/mdnaim2004/Downloads/graph.png
 */
