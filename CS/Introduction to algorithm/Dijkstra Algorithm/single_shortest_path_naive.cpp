@@ -56,11 +56,8 @@ int main() {
     dijkstra(src);
 
     for (int i = 0; i < n; i++) {
-        cout << i << " => ";
-        if (dis[i] == INF)
-            cout << "INF";
-        else
-            cout << dis[i];
+        cout << i << " => " << dis[i];
+        
         cout << endl;
     }
 
