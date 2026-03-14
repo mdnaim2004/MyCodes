@@ -3,7 +3,7 @@ using namespace std;
 
 char grid[1005][1005];
 bool vis[1005][1005];
-vector<pair<int, int>> d = {{-1, 0}, {1,0}, {0,-1}, {0, 1}};
+vector<pair<int, int>> d = {{0,1}, {0,-1}, {-1,0}, {1,0}};
 
 int n,m;
 bool valid(int i, int j){
@@ -12,37 +12,55 @@ bool valid(int i, int j){
     return true;
 }
 
-void dfs(int si, int sj){
+bool dfs(int si, int sj){
+
+    if(grid[si][sj] == 'D')
+        return true;
+
     vis[si][sj] = true;
+
     for(int i=0; i<4; i++){
         int ci = si + d[i].first;
         int cj = sj + d[i].second;
-        if(valid(ci, cj) && !vis[ci][cj] && grid[ci][cj] == '.')
-            dfs(ci, cj);
+        if(valid(ci, cj) && !vis[ci][cj] && (grid[ci][cj] == '.' || grid[ci][cj] == 'D')){
+            if(dfs(ci, cj)){
+                if(grid[si][sj] != 'R' && grid[si][sj] != 'D')
+                    grid[si][sj] = 'X';
+                return true;
+            }
+        }     
+
     }
+    return false;
 }
+
 int main(){
     //int n,m;
     cin >> n >> m;
+
+    int si, sj;
 
     for(int i=0; i<n; i++)
         for(int j=0; j<m; j++)
             cin >> grid[i][j];
 
-    int si,sj, di,dj;
-    cin >> si >> sj;
-    cin >> di >> dj;
-
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            if(grid[i][j] == 'R'){
+                si = i;
+                sj = j;
+            }
+             
     memset(vis, false, sizeof(vis));
-
-    if(grid[si][sj] == '-' || grid[di][dj] == '-'){
-        cout << "NO" << endl;
-        return 0;
-    }
     dfs(si, sj);
 
-    if(vis[di][dj] == true) cout << "YES" << endl;
-    else cout << "NO" << endl;
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            cout << grid[i][j];
+        }
+        cout << endl;
+    }
+
 
     return 0;
 }
