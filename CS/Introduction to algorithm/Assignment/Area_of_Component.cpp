@@ -41,7 +41,7 @@ int main(){
 
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){
-            if(vis[i][j] == false && grid[i][j] == '.'){
+            if(vis[i][j] == false && grid[i][j] != '-'){
                 cont = 0;
                 dfs(i, j);
                 ans = min(ans,cont);
