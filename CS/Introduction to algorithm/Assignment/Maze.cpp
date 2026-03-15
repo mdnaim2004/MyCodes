@@ -45,7 +45,6 @@ void bfs(int si, int sj){
     }
 }
 
-
 int main(){
 
     //int n,m;
@@ -78,9 +77,7 @@ int main(){
     //cout << vis[er][ec] << endl;
 
     if(vis[er][ec]  == 1){
-
-        //int r = er, c = ec;
-
+        
         while(true){
             pair<int, int> p = parent[er][ec];
             er = p.first;
@@ -97,7 +94,6 @@ int main(){
             }
             cout << endl;
         }
-
     }
     else{
         for(int i=0; i<n; i++){
@@ -107,7 +103,6 @@ int main(){
             cout << endl;
         }
     }
-
 
     return 0;
 }
