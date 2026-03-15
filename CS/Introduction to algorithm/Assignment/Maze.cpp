@@ -31,11 +31,11 @@ void bfs(int si, int sj){
 
         //cout << par_i << " " << par_j << endl;
 
-        for(int i=0; i<8; i++){
+        for(int i=0; i<4; i++){
             int ci = par_i + d[i].first;
             int cj = par_j + d[i].second;
 
-            if(valid(ci,cj) && !vis[ci][cj]){
+            if(valid(ci,cj) && !vis[ci][cj] &&grid[ci][cj] != '#'){
                 q.push({ci, cj});
                 vis[ci][cj] = true;
                 level[ci][cj] = level[par_i][par_j] + 1;
@@ -46,6 +46,10 @@ void bfs(int si, int sj){
 
 
 int main(){
+
+    //int n,m;
+    cin >> n >> m;
+
     for(int i=0; i<n; i++)
         for(int j=0; j<m; j++)
             cin >> grid[i][j];
@@ -65,6 +69,43 @@ int main(){
     }
 
     memset(vis, false, sizeof(vis));
+    memset(level, -1, sizeof(level));
+    memset(parent, -1, sizeof(parent));
+
+    bfs(sr, sc);
+
+    //cout << vis[er][ec] << endl;
+
+    if(vis[er][ec]  == 1){
+
+        int r = er, c = ec;
+
+        while(true){
+            pair<int, int> p = parent[r][c];
+            r = p.first;
+            c= p.second;
+
+            if(grid[r][c] == 'R'){
+                break;
+            }
+            grid[r][c] = 'X';
+        }
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                cout << grid[i][j];
+            }
+            cout << endl;
+        }
+
+    }
+    else{
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                cout << grid[i][j];
+            }
+            cout << endl;
+        }
+    }
 
 
     return 0;
