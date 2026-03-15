@@ -39,6 +39,7 @@ void bfs(int si, int sj){
                 q.push({ci, cj});
                 vis[ci][cj] = true;
                 level[ci][cj] = level[par_i][par_j] + 1;
+                parent[ci][cj] = {par_i, par_j};
             }
         }
     }
@@ -78,17 +79,17 @@ int main(){
 
     if(vis[er][ec]  == 1){
 
-        int r = er, c = ec;
+        //int r = er, c = ec;
 
         while(true){
-            pair<int, int> p = parent[r][c];
-            r = p.first;
-            c= p.second;
+            pair<int, int> p = parent[er][ec];
+            er = p.first;
+            ec= p.second;
 
-            if(grid[r][c] == 'R'){
+            if(grid[er][ec] == 'R'){
                 break;
             }
-            grid[r][c] = 'X';
+            grid[er][ec] = 'X';
         }
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
