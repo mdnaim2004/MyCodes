@@ -12,12 +12,18 @@ class Edge{
 };
 
 int dis[1005];
+vector<Edge> edge_list;
+
+
+void bellman-ford(){
+
+}
 
 int main(){
     int n, e;
     cin >> n >> e;
 
-    vector<Edge> edge_list;
+    // vector<Edge> edge_list;
 
     while(e--){
         int a, b, c;
@@ -53,6 +59,6 @@ int main(){
     for(int i=0; i<n; i++){
         cout << i << " => " << dis[i] << endl;
     }
-    
+
     return 0;
 }
