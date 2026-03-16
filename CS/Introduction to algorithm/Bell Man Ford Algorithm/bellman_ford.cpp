@@ -11,6 +11,8 @@ class Edge{
     }
 };
 
+int dis[1005];
+
 int main(){
     int n, e;
     cin >> n >> e;
@@ -24,8 +26,24 @@ int main(){
 
 
     }
+    // for(auto ed : edge_list){
+    //     //cout << ed.a << " " << ed.b << " " << ed.c << " " << endl;
+    // }
+
+    for(int i=0; i<n; i++){
+        dis[i] = INT_MAX;
+    }
+    dis[0] = 0;
+
     for(auto ed : edge_list){
-        cout << ed.a << " " << ed.b << " " << ed.c << " " << endl;
+
+        int a,b,c;
+        
+        a = ed.a;
+        b = ed.b;
+        c = ed.c;
+
+        if
     }
     return 0;
 }
