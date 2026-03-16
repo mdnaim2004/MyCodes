@@ -33,22 +33,12 @@ void bellman_ford(){
 }
 
 int main(){
-    // int n, e;
     cin >> n >> e;
-
-    // vector<Edge> edge_list;
-
     while(e--){
         int a, b, c;
         cin >> a >> b >> c;
         edge_list.push_back(Edge(a, b, c));
-        // edge_list.push_back(Edge(b, a, c)); // for undirected graph....
-
-
     }
-    // for(auto ed : edge_list){
-    //     //cout << ed.a << " " << ed.b << " " << ed.c << " " << endl;
-    // }
 
     for(int i=0; i<n; i++){
         dis[i] = INT_MAX;
