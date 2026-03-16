@@ -47,11 +47,9 @@ void bellman_ford(){
             cout << i << " => " << dis[i] << endl;
 }
 
-int main()
-{
+int main(){
     cin >> n >> e;
-    while (e--)
-    {
+    while (e--){
         int a, b, c;
         cin >> a >> b >> c;
         edge_list.push_back(Edge(a, b, c));
