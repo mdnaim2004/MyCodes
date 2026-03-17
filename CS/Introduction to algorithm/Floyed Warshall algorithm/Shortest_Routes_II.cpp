@@ -2,28 +2,28 @@
 using namespace std;
 
 int main(){
-    int n, e;
-    cin  >> n >> e;
+    int n, m, q;
+    cin >> n>> m>> q;
     int adj_mat[n][n];
 
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
-            if(i == 0){
+            if(i == j)
                 adj_mat[i][j] = 0;
-            }
-            else{
+            else
                 adj_mat[i][j] = INT_MAX;
-            }
         }
     }
 
-    while(e--){
+    while(m--){
         int a, b, c;
-        cin >> a >> b >> c;
+        cin >> a>>b >> c;
+
         adj_mat[a][b] = c;
+        adj_mat[b][a] = c;
     }
 
-        for(int k=0; k<n; k++){
+    for(int k=0; k<n; k++){
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){ 
                 //cout << i << " " << k << " " << j << endl;
@@ -33,25 +33,11 @@ int main(){
             }
         }  
     }
-
-    bool cycle = false;
-    for(int i=0; i<n; i++){
-        if(adj_mat[i][i] < 0)
-            cycle = true;
-    }
-
-    if(cycle)
-        cout << "Negitive weighted cycle detected.\n";
-    else{
-        for(int i=0; i<n; i++){
-            for(int j=0; j<n; j++){
-                if(adj_mat[i][j] == INT_MAX)
-                    cout << "INF " ;
-                else
-                    cout << adj_mat[i][j] << " ";
-            }
-            cout << endl;
-        }
+    while(q--){
+        int s, d;
+        cin >> s >> d;
+        if(adj_mat[s][d] == INT_MAX) cout << -1 << endl;
+        else cout << adj_mat[s][d] << endl;
     }
 
     return 0;
