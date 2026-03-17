@@ -27,20 +27,23 @@ int main(){
     for(int k=0; k<n; k++){
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){ 
-                cout << i << " " << k << " " << j << endl;
+                //cout << i << " " << k << " " << j << endl;
+
+                if(adj_mat[i][k] != INT_MAX && adj_mat[k][j] != INT_MAX && adj_mat[i][k] + adj_mat[j][k] < adj_mat[i][j])
+                    adj_mat[i][j] = adj_mat[i][k] + adj_mat[k][j];
             }
         }  
     }
 
     
-    // for(int i=0; i<n; i++){
-    //     for(int j=0; j<n; j++){
-    //         if(adj_mat[i][j] == INT_MAX)
-    //             cout << "INF " ;
-    //         else
-    //             cout << adj_mat[i][j] << " ";
-    //     }
-    //     cout << endl;
-    // }
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            if(adj_mat[i][j] == INT_MAX)
+                cout << "INF " ;
+            else
+                cout << adj_mat[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
