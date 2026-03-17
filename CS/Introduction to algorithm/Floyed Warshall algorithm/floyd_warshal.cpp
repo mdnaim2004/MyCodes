@@ -41,7 +41,6 @@ int main(){
             cycle = true;
     }
 
-
     if(cycle)
         cout << "Negitive weighted cycle detected.\n";
     else{
@@ -55,8 +54,6 @@ int main(){
             cout << endl;
         }
     }
-
-
 
     return 0;
 }
