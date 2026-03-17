@@ -9,7 +9,10 @@ int main(){
 
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
-            adj_mat[i][j] = INT_MAX;
+            if(i == j)
+                adj_mat[i][j] = 0;
+            else
+                adj_mat[i][j] = INT_MAX;
         }
     }
     
@@ -20,9 +23,13 @@ int main(){
         adj_mat[a][b] = c;
         //adj_mat[b][a] = c; //if undirected.....
     }
+    
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
-            cout << adj_mat[i][j] << " ";
+            if(adj_mat[i][j] == INT_MAX)
+                cout << "INF " ;
+            else
+                cout << adj_mat[i][j] << " ";
         }
         cout << endl;
     }
