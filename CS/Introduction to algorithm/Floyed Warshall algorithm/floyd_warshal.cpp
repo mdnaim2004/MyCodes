@@ -6,6 +6,12 @@ int main(){
     cin >> n >> e;
 
     int adj_mat[n][n];
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            adj_mat[i][j] = INT_MAX;
+        }
+    }
     
     while(e--){
         int a, b, c;
@@ -13,6 +19,12 @@ int main(){
 
         adj_mat[a][b] = c;
         //adj_mat[b][a] = c; //if undirected.....
+    }
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cout << adj_mat[i][j] << " ";
+        }
+        cout << endl;
     }
     return 0;
 }
