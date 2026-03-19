@@ -4,6 +4,7 @@ int par[1005];
 
 int find(int node){
     while(par[node] != -1){
+        cout << node << endl;
         node = par[node];
     }
     return node;
