@@ -6,7 +6,7 @@ int group_size[1005];
 
 //find operation....
 int find(int node){
-    cout << node << endl;
+    //cout << node << endl;
     if(par[node] == -1){
         return node;
     }
@@ -23,7 +23,12 @@ void dsu_union(int node1, int node2){
 
     if(group_size[leader1] > group_size[leader2]){
         par[leader2] = leader1;
+        group_size[leader1] += group_size[leader2]; 
+    }else{
+        par[leader1] = leader2;
+        group_size[leader2] += group_size[leader1];
     }
+
 }
 
 int main(){
@@ -32,7 +37,13 @@ int main(){
 
 
     dsu_union(1,2);
+    dsu_union(2, 0);
+    dsu_union(3, 1);
 
-    cout << find(4) << endl;
+    //cout << find(4) << endl;
+    for(int i=0; i<6; i++){
+        cout << i << " => " << par[i] << endl;
+    }
+
     return 0;
 }
