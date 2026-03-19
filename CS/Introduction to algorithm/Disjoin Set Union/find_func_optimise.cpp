@@ -9,6 +9,7 @@ int find(int node){
         return node;
     }
     int leader = find(par[node]);
+    par[node] = leader;
 
     return leader;
 }
