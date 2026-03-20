@@ -5,7 +5,8 @@ int main(){
     int n, e;
     cin >> n >> e;
 
-    long long int adj_mat[n][n];
+    long long int adj_mat[n+5][n+5];
+
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             if(i == j)
