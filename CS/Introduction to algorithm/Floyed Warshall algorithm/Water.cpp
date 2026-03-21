@@ -17,8 +17,8 @@ int main(){
 
         for(int i=1; i<n; i++){
             if(h[i] > h[f_max]){
-                f_max = i;
                 s_max = f_max;
+                f_max = i;
             }
             else if(h[i] > h[s_max]){
                 s_max = i;
