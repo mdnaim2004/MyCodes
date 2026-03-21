@@ -25,7 +25,7 @@ int main(){
             }
         }
         if(f_max >= s_max)
-            cout << f_max << " " << s_max << endl;
+            cout << s_max << " " << f_max << endl;
         else
             cout << f_max << " " << s_max << endl;
 
