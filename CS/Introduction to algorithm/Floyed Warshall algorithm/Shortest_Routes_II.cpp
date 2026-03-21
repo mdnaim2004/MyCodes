@@ -2,8 +2,8 @@
 using namespace std;
 
 int main(){
-    int n, m, q;
-    cin >> n>> m>> q;
+    int n, m;
+    cin >> n>> m;
     long long int adj_mat[n+5][n+5];
 
     for(int i=0; i<=n; i++){
@@ -20,7 +20,7 @@ int main(){
         cin >> a>>b >> c;
 
         adj_mat[a][b] = min(adj_mat[a][b], c);
-        adj_mat[b][a] = min(adj_mat[b][a],c);
+        // adj_mat[b][a] = min(adj_mat[b][a],c);  // for undirected graph....
            
     }
 
@@ -29,11 +29,13 @@ int main(){
             for(int j=1; j<=n; j++){ 
                 //cout << i << " " << k << " " << j << endl;
 
-                if(adj_mat[i][k] != LLONG_MAX && adj_mat[k][j] != LLONG_MAX && adj_mat[i][k] + adj_mat[j][k] < adj_mat[i][j])
+                if(adj_mat[i][k] != LLONG_MAX && adj_mat[k][j] != LLONG_MAX && adj_mat[i][k] + adj_mat[k][j] < adj_mat[i][j])
                     adj_mat[i][j] = adj_mat[i][k] + adj_mat[k][j];
             }
         }  
     }
+    int q;
+    cin >> q;
     while(q--){
         int x, y;
         cin >> x >> y;
