@@ -13,7 +13,7 @@ int main(){
             cin >> h[i];
         }
 
-        int f_max = 0, s_max = 0;
+        int f_max = 0, s_max = -1;
 
         for(int i=1; i<n; i++){
             if(h[i] > h[f_max]){
