@@ -20,7 +20,7 @@ int main(){
                 sec_max = fst_max;
                 fst_max = i;
             }
-            else if(high[i] > high[sec_max]){
+            else if(sec_max == -1 || high[i] > high[sec_max]){
                 sec_max = i;
             }
         }
