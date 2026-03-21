@@ -24,7 +24,11 @@ int main(){
                 s_max = i;
             }
         }
-        cout << f_max << " " << s_max << endl;
+        if(f_max >= s_max)
+            cout << f_max << " " << s_max << endl;
+        else
+            cout << f_max << " " << s_max << endl;
+
     }
     return 0;
 }
