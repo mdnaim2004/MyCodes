@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int par[1005];
-int group_size[1005];
+int par[100005];
+int group_size[100005];
 
 int cmp, mx;
 
