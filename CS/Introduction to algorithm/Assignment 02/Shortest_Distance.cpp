@@ -48,11 +48,5 @@ int main(){
             cout << adj_mat[x][y] << endl;
     }
 
-
-
-
-
-
-
     return 0;
 }
