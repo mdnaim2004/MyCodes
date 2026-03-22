@@ -7,7 +7,7 @@ int main(){
     while(t--){
         int n;
         cin >> n;
-        int high[n];
+        vector <int> high(n);
 
         for(int i=0; i<n; i++){
             cin >> high[i];
