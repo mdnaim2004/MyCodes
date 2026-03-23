@@ -18,7 +18,12 @@ int main(){
         ll n;
         cin >> n;
 
-        rec(n);
+        if(n == 0){
+            cout << 0;
+        } else {
+            rec(n);
+        }
+
         cout << endl;
     }
     return 0;
