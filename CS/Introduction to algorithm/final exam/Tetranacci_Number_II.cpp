@@ -4,7 +4,7 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-    int treta[n+1];
+    long long int treta[n+1];
     treta[0] = 0;
     treta[1] = 1;
     treta[2] = 1;
