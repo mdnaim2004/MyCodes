@@ -34,8 +34,10 @@ int main(){
         cin >> n >> w;
 
         for(int i=0; i<n; i++){
-            cin >> val[i];
             cin >> weight[i];
+        }
+        for(int i=0; i<n; i++){
+            cin >> val[i];
         }
 
         for(int i=0; i<=n; i++){
