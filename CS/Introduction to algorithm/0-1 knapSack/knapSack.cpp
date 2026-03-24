@@ -25,8 +25,6 @@ int knapsack(int i, int max_weight){
         return knapsack(i-1, max_weight);
         
     }
-
-
 }
 
 int main(){
