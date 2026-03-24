@@ -32,7 +32,6 @@ int knapsack(int i, int mx_weight){
         return dp[i][mx_weight];
     }
 }
-
 int main(){
     int n, mx_weight;
 
