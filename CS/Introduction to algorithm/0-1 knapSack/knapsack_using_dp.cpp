@@ -5,7 +5,6 @@ int val[1005], weight[1005];
 int dp[1005][1005];
 
 int knapsack(int i, int mx_weight){
-<<<<<<< HEAD
     if(i<0 || mx_weight <= 0){
         return 0;
     }
@@ -19,7 +18,6 @@ int knapsack(int i, int mx_weight){
     if(dp[i][mx_weight] != -1)
         return dp[i][mx_weight];
     
->>>>>>> 8f74d68 (sorry in this program, time complexity is convert into O(2^n) into O(nw))
     if(weight[i] <= mx_weight){
         int opt1 = knapsack(i-1, mx_weight - weight[i]) + val[i];
         int opt2 = knapsack(i-1, mx_weight);
@@ -43,10 +41,6 @@ int main(){
     for(int i=0; i<n; i++){
         cin >> weight[i];
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 8f74d68 (sorry in this program, time complexity is convert into O(2^n) into O(nw))
     cin >> mx_weight;
 
     for(int i=0; i<=n; i++){
@@ -54,10 +48,6 @@ int main(){
             dp[i][j] = -1;
         }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 8f74d68 (sorry in this program, time complexity is convert into O(2^n) into O(nw))
     cout << knapsack(n-1, mx_weight) << endl;
     
     return 0;
