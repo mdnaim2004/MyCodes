@@ -11,7 +11,7 @@ int main(){
     treta[3] = 2;
 
     for(int i=4; i<=n; i++){
-        treta[i] = treta[i-1]+ treta[i-2] +treta[i-3] + treta[i-4];
+        treta[i] = treta[i-1]+ treta[i-2] +treta[i-3];
     }
     cout << treta[n] << endl;
     return 0;
