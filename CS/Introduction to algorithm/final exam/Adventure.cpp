@@ -6,11 +6,9 @@ int weight[1005];
 int dp[1005][1005];
 
 int knapsack(int i, int mx_weight){
-    if(i<0 || mx_weight <= 0)
-        return 0;
+    if(i<0 || mx_weight <= 0) return 0;
     
-    if(dp[i][mx_weight] != -1)
-        return dp[i][mx_weight];
+    if(dp[i][mx_weight] != -1) return dp[i][mx_weight];
     
     if(weight[i] <= mx_weight){
         int opt1 = knapsack(i-1, mx_weight - weight[i]) + val[i];
