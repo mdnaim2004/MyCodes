@@ -6,18 +6,18 @@ int main(){
     cin >> n;
     vector<int>arr(n);
 
-    for(int i=1; i<=n; i++){
+    for(int i=0; i<n; i++){
         cin >> arr[i];
     }
 
     vector<pair<int, int>> v;
 
-    for(int i=1; i<=v.size(); i++){
+    for(int i=0; i<n; i++){
         v.push_back({arr[i], i+1});
     }
     sort(v.begin(), v.end());
 
-    int i=1;
+    int i=0;
 
     while(i < v.size()){
         int val = v[i].first;
@@ -26,7 +26,7 @@ int main(){
         
         int j = i;
 
-        while(j < v.size() && v[i].first == val){
+        while(j < v.size() && v[j].first == val){
             lst = v[j].second;
             j++;
         }
