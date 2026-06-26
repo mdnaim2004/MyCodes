@@ -23,7 +23,7 @@ void dfs(int si,int sj){
         ci = si + d[i].first;
         cj = sj + d[i].second;
 
-        //cout << ci << " "  << cj << endl;
+        //cout << ci << " "  << cj <<"\n";
 
         if(valid(ci,cj) && !vis[ci][cj])
             dfs(ci,cj);
